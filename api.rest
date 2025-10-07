@@ -1,0 +1,22 @@
+### Add User
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Vishwas",
+  "email": "vishwas@example.com",
+  "password": "12345"
+}
+
+###
+
+### Upload PDF
+POST http://localhost:3000/upload
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+------WebKitFormBoundary
+Content-Disposition: form-data; name="pdf"; filename="sample.pdf"
+Content-Type: application/pdf
+
+< ./sample.pdf
+------WebKitFormBoundary--
